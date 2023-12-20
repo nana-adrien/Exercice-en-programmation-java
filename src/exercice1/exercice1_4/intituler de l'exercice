@@ -1,0 +1,20 @@
+Exercice 1.4 : le code suivant compile t-il? Si non, indiquez les erreurs affichées par le compilateur et
+proposez des corrections. A quel affichage conduit l'exécution du programme (éventuellement
+corrigé)?
+class Test {
+int i;
+Test(Test t) {
+if(t == null) this.i = 12;
+else{
+t.m();
+this.i = t.i;
+}
+}
+void m() {
+this.i++;
+System.out.println(this.i);
+}
+public static void main(String[] toto) {
+Test i = new Test(new Test(new Test(null)));
+}
+}

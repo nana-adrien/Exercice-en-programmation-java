@@ -1,0 +1,25 @@
+Exercice 2.6 : à quel affichage conduit l'exécution du programme suivant?
+class A{
+A a;
+A(){ this.a = this; }
+A(A a){ this.a = a; }
+void m(){
+if(this == this.a) System.out.println("Ahah!");
+else System.out.println("Héhé!");
+}
+}
+class B extends A{
+B o;
+B(){ super(); this.a = this; this.o = (B) this; }
+void m(){ System.out.println("Ohoh!"); }
+public static void main(String[] toto){
+A u = new A();
+A i = new A(u);
+A b = new B();
+u.m();
+i.m();
+b.m();
+((B) b).o.m();
+}
+}
+

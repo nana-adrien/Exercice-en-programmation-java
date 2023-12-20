@@ -1,0 +1,25 @@
+Exercice 2.4 :
+class A{
+B b;
+void addB(B b){
+this.b = b;
+}
+int m(){
+if(this.b != null) return -1 + this.b.m(); else return 0;
+}
+}
+class B extends A{
+int i = 1;
+int m(){
+i = this.i+1;
+return this.i;
+}
+}
+Pour chaque programme ci-dessous, indiquez s'il compile et si oui, à quel affichage il conduit.
+a. b. c.
+A a = new A(); A a = new A(); A x = new B();
+B b = new B(); a.addB(new B()); A y = new A();
+a.addB(b); System.out.println(a.b.m()); B z = new B();
+System.out.println(a.m()); System.out.println(((A) a.b).m()); x.addB(z);
+System.out.println(b.m()); System.out.println(x.m());
+System.out.println(y.m());

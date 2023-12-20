@@ -1,0 +1,27 @@
+Exercice 2.8 : le code suivant compile t-il? Si non, indiquez les erreurs affichées par le compilateur et
+proposez des corrections. A quel affichage conduit l'exécution du programme (éventuellement
+corrigé)?
+class A extends Object{
+int i;
+A(int i){ this.i = i; }
+}
+class B extends A{
+A bidule;
+int i = 2;
+B(){ this.bidule = this; }
+B(A a){
+super(3);
+this.bidule = a;
+}
+public static void main(String[] toto){
+A a2 = new A(5);
+B b1 = new B(a2);
+B b2 = new B();
+System.out.println(b1.i);
+System.out.println(((A) b1).i);
+System.out.println(b1.bidule.i);
+System.out.println(b2.i);
+System.out.println(((A) b2).i);
+System.out.println(b2.bidule.i);
+}
+}

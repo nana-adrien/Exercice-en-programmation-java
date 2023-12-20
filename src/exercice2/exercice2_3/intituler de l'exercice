@@ -1,0 +1,28 @@
+Exercice 2.3 :
+class Toto {
+int i,j;
+Toto(int i) {
+this.i = i;
+this.j = i;
+}
+}
+class Titi extends Toto {
+int k;
+Titi(int i) {
+super(i);
+this.i = i+super.i;
+this.k = this.j+2;
+}
+public static void main(String[] truc){
+…
+System.out.println(t.i);
+System.out.println(t.j);
+System.out.println(t.k);
+}
+}
+Si on remplace les … par chacune des quatre instructions ci-dessous, indiquer si le programme
+compile et si oui, à quel affichage il conduit.
+a. Toto t = new Titi(1);
+b. Titi t = new Titi(1);
+c. Titi t = (Toto) new Titi(1);
+d. Titi t = new Titi(1);

@@ -1,0 +1,26 @@
+Exercice 1.6 : le code suivant compile t-il? Si non, indiquez les erreurs affichées par le compilateur et
+proposez des corrections. À quel affichage conduit l'exécution du programme (éventuellement
+corrigé)?
+class Test{
+int i;
+Test(){
+this.i = 1;
+}
+Test(int i){
+this();
+this.i = i;
+}
+void m(){
+this.i++;
+System.out.println(this.i);
+}
+protected void finalize(){
+System.out.println(this.i);
+}
+public static void main(String[] toto){
+Test i = new Test(2);
+i.m();
+i = new Test();
+System.gc();
+}
+}

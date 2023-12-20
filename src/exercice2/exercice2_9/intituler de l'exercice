@@ -1,0 +1,23 @@
+Exercice 2.9 : le code suivant compile t-il? Si non, indiquez les erreurs affichées par le compilateur et
+proposez des corrections. A quel affichage conduit l'exécution du programme (éventuellement
+corrigé)?
+class A{
+int i;
+A(){
+this.i = 0;
+}
+void m(){System.out.println("A");}
+}
+class B extends A{
+int i = 2;
+void m(){System.out.println("B");}
+public static void main(String[] toto){
+A a = new A();
+B b = new B();
+System.out.println(b.i);
+System.out.println(a.i);
+System.out.println(((A) b).i);
+b.m();
+a.m();
+}
+}

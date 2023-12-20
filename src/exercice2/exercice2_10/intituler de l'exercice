@@ -1,0 +1,28 @@
+Exercice 2.10 : on veut développer un logiciel pour générer des sujets d'examen. Un programmeur a
+écrit la classe suivante avant de démissionner (il a gagné au loto). Vous devez continuer le
+développement.
+class Question{
+String enonce;
+int difficulte=50; // la difficulte varie de 0 à 100
+Question(String e){
+this.enonce = e;
+}
+void setDifficulte(int d){
+this.difficulte = d;
+}
+int getDifficulte(){
+return this.difficulte;
+}
+String getEnonce(){
+return this.enonce;
+}
+}
+On veut représenter les questions de QCM (Questionnaire à Choix Multiples). Chaque question
+à choix multiple a, en plus d'un énoncé et d'une difficulté, un ensemble de réponses possibles, chaque
+réponse ayant un énoncé et une valeur de vérité (une réponse peut être vraie ou fausse).
+a. Proposez du code pour représenter les questions à choix multiples.
+b. Un sujet d'examen est une liste de questions (de QCM ou autre) avec un barême. Chaque
+question du sujet a donc un nombre de points. Sans modifier les classes que vous avez écrites avant,
+écrivez du code objet pour représenter les sujets, avec en particulier une méthode qui permet d'obtenir
+la difficulté moyenne du sujet. La difficulté moyenne est la somme des difficultés des questions du
+sujet, divisée par le nombre de questions.

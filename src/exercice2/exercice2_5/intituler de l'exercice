@@ -1,0 +1,16 @@
+Exercice 2.5 : le code suivant compile t-il? Si non, indiquez les erreurs affichées par le compilateur et
+proposez des corrections. À quel affichage conduit l'exécution du programme (éventuellement
+corrigé)?
+class B{
+int i = 5;
+B(){ this.i = this.i-1; }
+B(int i){ this(); this.i = i; }
+}
+class C extends B{
+C(int i){ this.i = i; }
+public static void main(String[] argggghhhh){
+B b = new B(2);
+C c = new C(1);
+System.out.println(b.i + " " + c.i);
+}
+}
