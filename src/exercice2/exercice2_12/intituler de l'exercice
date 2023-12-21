@@ -1,0 +1,32 @@
+Exercice 2.12 : on veut développer un logiciel pour informatiser le parcours de soin dans un hopital.
+Un programmeur a écrit le code suivant, mais il a du arrêter le développement (il a été hospitalisé).
+enum Maladie{
+// on suppose que toutes les maladies sont énumérées ici
+GRIPPE, PESTE, CHOLERA, ...;
+}
+import java.time.Instant;
+class Diagnostic{
+String soignant;
+Instant date;
+Maladie maladie;
+int validite; // fiabilité du diagnostic, entre 0 et 100%
+Diagnostic(String s, Instant d, Maladie m, int v){
+this.soignant = s;
+this.date = d;
+this.maladie = m;
+this.valididte = v;
+}
+}
+Il faut représenter dans le logiciel les patients, avec leurs nom, prénom, date de naissance, sexe
+et les actes médicaux qu'ils ont subis. Ces actes peuvent être des diagnostics ou des soins. Un soin est
+réalisé par un personnel soignant, à une certaine date et produit une certaine amélioration de l'état du
+patient (en pourcentage). On peut représenter les dates avec la classe java.time.Instant. Il doit être
+possible de récupérer l'âge d'un patient et de lui ajouter un acte médical (si d est un objet de type
+Instant, le nombre d'années (au format long) qui sépare d de maintenant est
+d.until(Instant.now(),ChronoUnit.YEARS)).
+a. Proposez du code objet pour représenter les patients et les actes (on a le droit de modifier la
+classe Diagnostic).
+Parmi tous les soins possibles, il y a la prise de médicaments, avec une posologie (quantité
+entière) et une fréquence (nombre de prises du médicament par jour).
+b. Proposez du code objet pour représenter les prises de médicaments. Ajoutez une méthode
+permettant de savoir combien un patient doit prendre de médicaments par jour
