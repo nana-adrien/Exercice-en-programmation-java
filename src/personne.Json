@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "nom": "Kakmeni",
+        "prenom": "Nana",
+        "age": 23,
+        "telephone": "675514685",
+        "niveau": "niveau1"
+    },
+    {
+        "id": 1,
+        "nom": "nana",
+        "prenom": "jilber",
+        "age": 45,
+        "telephone": "675514685",
+        "niveau": "niveau8"
+    },
+    {
+        "id": 3,
+        "nom": "adrien",
+        "prenom": "peggi",
+        "age": 12,
+        "telephone": "675514685",
+        "niveau": "niveau6"
+    }
+]
